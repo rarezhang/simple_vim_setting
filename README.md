@@ -1,8 +1,7 @@
 # Simple VIM Setting
 ## Install
 ```
-cd ~
-mkdir .vim
+mkdir ~/.vim
 cd .vim
 git clone https://github.com/rarezhang/simple_vim_setting.git && mv simple_vim_setting/* . && rm -rf simple_vim_setting
 cd ~
