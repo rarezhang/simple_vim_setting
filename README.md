@@ -60,7 +60,7 @@ inside a method and type ```‘za’``` to open and close a fold.
 :Gcommit    - git commit
 ```
 
-###5. Open undotree  /   NERDTree   /   taglist 
+###5. Open undotree  /   NERDTree   /   taglist
 ```
 <,undo>
 <,tree>
@@ -88,13 +88,13 @@ e.g., def<tab>
 <,p>
 ```
 
-###10. Run script
+###10. Execute script
 ```
 <F5>
 ```
 
 ## Install from scratch
-###1. remove vim & re-install vim
+###1. Remove vim & re-install vim
 ```
 sudo apt-get remove vim
 sudo apt-get remove vim-runtime
@@ -107,7 +107,7 @@ sudo apt-get install vim
 sudo apt-get install vim-doc vim-scripts
 ```
 
-###2. create vimrc file
+###2. Create vimrc file
 ```
 mkdir ~/.vim && cd .vim
 vi vimrc
@@ -116,18 +116,18 @@ Copy and paste all the [content](/vimrc) to .vimrc file.
 
 
 
-###3. install pathogen.vim
+###3. Install pathogen.vim
 ```
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 
-###4. git and install plug-in
+###4. Git and install plug-in
 ```
 cd ~/.vim/
 git init
 ```
-####4.1 supertab
+####4.1 Supertab
 use <Tab> for all your insert completion needs
 ```
 git submodule add https://github.com/ervandew/supertab.git bundle/supertab
@@ -157,7 +157,7 @@ list all open buffers as tabs
 ```
 git submodule add https://github.com/fholgado/minibufexpl.vim.git bundle/minibufexpl
 ```
-####4.7 undotree
+####4.7 Undotree
 store the undo history
 ```
 git submodule add https://github.com/mbbill/undotree.git bundle/undotree
@@ -172,17 +172,17 @@ a statusline plugin for vim, and provides statuslines and prompts for several ot
 ```
 git submodule add https://github.com/bling/vim-airline.git bundle/vim-airline
 ```
-####4.10 vim-colors-solarized
+####4.10 Vim-colors-solarized
 colorscheme versions for Vim
 ```
 git submodule add https://github.com/altercation/vim-colors-solarized.git bundle/vim-colors-solarized
 ```
-####4.11 vim-fugitive
+####4.11 Vim-fugitive
 Integration with Git
 ```
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 ```
-####4.12. update all
+####4.12. Update all
 ```
 git submodule init
 git submodule update
@@ -193,5 +193,5 @@ git submodule foreach git submodule update
 ###5. move .vimrc to the directory .vim; create symbolic link to .vimrc
 ```
 cd ~
-ln -s ~/.vim/vimrc
+ln -s ~/.vim/vimrc ~/.vimrc
 ```
