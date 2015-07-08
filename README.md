@@ -28,7 +28,7 @@ wget -qO- https://raw.githubusercontent.com/rarezhang/simple_vim_setting/master/
 ```
 ## Uninstall
 ```
-rm -rf .vim .vimrc
+rm -rf ~/.vim ~/.vimrc
 ```
 
 ## VIM Tips
