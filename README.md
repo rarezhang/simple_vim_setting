@@ -1,7 +1,5 @@
 # Simple VIM Setting
 
-
-==================================================================================
 ## VIM Tips 
 ###1. Under Normal Mode
 ```
@@ -36,9 +34,11 @@ inside a method and type ```‘za’``` to open and close a fold.
 ```
 
 ###5. open undotree  /   NERDTree   /   taglist 
-```,undo```
-```,tree```
-```,tag```
+```
+,undo
+,tree
+,tag
+```
 
 ###6. snipmate
 ```
@@ -51,13 +51,13 @@ e.g., def<tab>
 - paste: shift+right mouse button
 
 ###8. search and replace the selected text
+```
 ,r
+```
 
 ###9.  go to the next / previous search result
 ```
 ,n
-```
-```
 ,p
 ```
 
