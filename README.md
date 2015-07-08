@@ -15,7 +15,7 @@ ln -s ~/.vim/.vimrc
 :wq    - save and quit
 i        - insert
 x VIM- delete character
-dd    - delete line, copied in clipboard 
+dd    - delete line, copied in clipboard
 p     - paste
 y     - copy
 :help <command>     - look up help doc
@@ -106,7 +106,8 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 ###4. git and install plug-in
 ```
-cd ~/.vim/                                                                                         git init
+cd ~/.vim/
+git init
 ```
 ####4.1 supertab
 use <Tab> for all your insert completion needs
