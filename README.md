@@ -3,7 +3,7 @@
 ![simplevimseetingscreenshot](https://cloud.githubusercontent.com/assets/5633774/8563546/f99f3706-24f5-11e5-9451-5e33d7cc2652.png)
 
 ## Features
-- pathogen: easy to install plugins and runtime files
+- Pathogen: easy to install plugins and runtime files
 - Supertab: <tab> for all your insert completion needs
 - Syntastic: external syntax checkers and displays any resulting errors
 - Auto Pairs: insert or delete brackets, parens, quotes in pair
@@ -25,6 +25,10 @@
 ## Install
 ```
 wget -qO- https://raw.githubusercontent.com/rarezhang/simple_vim_setting/master/install.sh | sh -x
+```
+## Uninstall
+```
+rm -rf .vim .vimrc
 ```
 
 ## VIM Tips
