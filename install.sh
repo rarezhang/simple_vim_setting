@@ -12,7 +12,7 @@ echo "---------------------------------"
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
     curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 echo "create .vimrc file"
-curl -LSso ~/.vimrc https://github.com/rarezhang/simple_vim_setting/blob/master/vimrc
+curl -LSso ~/.vimrc https://raw.githubusercontent.com/rarezhang/simple_vim_setting/master/vimrc
 
 echo "install vim plugins.."
 cd ~/.vim/
