@@ -35,7 +35,7 @@ map <leader>tag :TlistToggle<CR>
 "" open NERDTree, tree of working directory
 map <leader>tree :NERDTreeToggle<CR>
 "" open undotree, undo and redo
-map <leader>
+map <leader>undo :UndotreeToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
