@@ -4,12 +4,12 @@
 cd ~
 mkdir .vim
 cd .vim
-git clone https://github.com/rarezhang/simple_vim_setting.git
+git clone https://github.com/rarezhang/simple_vim_setting.git && mv simple_vim_setting/* . && rm -rf simple_vim_setting
 cd ~
-ln -s ~/.vim/.vimrc
+ln -s ~/.vim/vimrc
 ```
 
-## VIM Tips 
+## VIM Tips
 ###1. Under normal mode
 ```
 :wq    - save and quit
@@ -91,10 +91,10 @@ sudo apt-get install vim-doc vim-scripts
 
 ###2. create vimrc file
 ```
-cd ~
-vi .vimrc
+mkdir ~/.vim && cd .vim
+vi vimrc
 ```
-Copy and paste all the [content](/.vimrc) to .vimrc file.
+Copy and paste all the [content](/vimrc) to .vimrc file.
 
 
 
@@ -175,7 +175,5 @@ git submodule foreach git submodule update
 ###5. move .vimrc to the directory .vim; create symbolic link to .vimrc
 ```
 cd ~
-mv .vimrc .vim
-ln -s ~/.vim/.vimrc
+ln -s ~/.vim/vimrc
 ```
-
