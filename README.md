@@ -1,4 +1,27 @@
 # Simple VIM Setting
+## Screenshot
+![simplevimseetingscreenshot](https://cloud.githubusercontent.com/assets/5633774/8563546/f99f3706-24f5-11e5-9451-5e33d7cc2652.png)
+
+## Features
+- pathogen: easy to install plugins and runtime files
+- Supertab: <tab> for all your insert completion needs
+- Syntastic: external syntax checkers and displays any resulting errors
+- Auto Pairs: insert or delete brackets, parens, quotes in pair
+- Snipmate: provide support for textual snippets
+- NERDTree: explore your file system and to open files and directories
+- MiniBufferExplorer: list all open buffers as tabs
+- Undotree: store the undo history
+- Tag List: an overview of the structure of source code files: class, filed, method
+- Vim-airline: provides statuslines and prompts
+- Vim-colors-solarized: colorscheme versions for Vim
+- Vim-fugitive: Integration with Git
+- Code folding
+- Show ALL white spaces as dot
+- Return to last edit position when opening files
+- Automatically insert file header when creating new files [*.cpp,*.[ch],*.sh,*.rb,*.java,*.py]
+- Compile and execute
+
+
 ## Install
 ```
 wget -qO- https://raw.githubusercontent.com/rarezhang/simple_vim_setting/master/install.sh | sh -x
