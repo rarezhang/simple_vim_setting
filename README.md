@@ -34,15 +34,15 @@ rm -rf ~/.vim ~/.vimrc
 ## VIM Tips
 ###1. Under normal mode
 ```
-:wq    - save and quit
-i        - insert
-x VIM- delete character
-dd    - delete line, copied in clipboard
-p     - paste
-y     - copy
-:help <command>     - look up help doc
-:?<pattern>       - search backward
-:Explore- file explore
+:wq             - save and quit
+i               - insert
+x VIM           - delete character
+dd              - delete line, copied in clipboard
+p               - paste
+y               - copy
+:help <command> - look up help doc
+:?<pattern>     - search backward
+:Explore        - file explore
 ```
 
 ###2. Code folding
@@ -51,24 +51,25 @@ inside a method and type ```‘za’``` to open and close a fold.
 ###3. Window splits
 ```
 :e <filename>      - edit another file
-:split <filename>   - Horizontal Split
-:vsplit <filename>     - vertical split
+:split <filename>  - Horizontal Split
+:vsplit <filename> - vertical split
 ```
 
 ###4. Git
 ```
-:Gwrite    - git add
-:Gread    - git checkout
-:Gremove    - git rm
-:Gmove       - git mv
-:Gcommit    - git commit
+:Gwrite  - git add
+:Gread   - git checkout
+:Gremove - git rm
+:Gmove   - git mv
+:Gcommit - git commit
 ```
 
-###5. Open undotree  /   NERDTree   /   taglist
+###5. Open undotree  /   NERDTree   /   taglist /  indent line
 ```
 <,undo>
 <,tree>
 <,tag>
+<,line>
 ```
 
 ###6. Snipmate
@@ -96,6 +97,16 @@ e.g., def<tab>
 ```
 <F5>
 ```
+
+###11. Auto completion
+```<C-Space>``` - Completion
+```<leader>g``` - Goto assignments (typical goto function) 
+```<leader>d``` - Goto definitions (follow identifier as far as possible, includes imports and statements) 
+```K```- Show Documentation/Pydoc (shows a popup with assignments) 
+```<leader>rname``` - Renaming
+```<leader>n``` - Usages (shows all the usages of a name)
+```:Pyimport <module name>``` - Open module, e.g. opens the `os` module :Pyimport os
+B
 
 ## Install from scratch
 ###1. Remove vim & re-install vim
@@ -186,7 +197,17 @@ Integration with Git
 ```
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 ```
-####4.12. Update all
+####4.12 Jedi-vim
+Python autocompletion
+```
+git submodule add https://github.com/davidhalter/jedi-vim.git bundle/jedi-vim
+```
+####4.13 IndentLine
+displaying thin vertical lines at each indentation level
+```
+git submodule add https://github.com/Yggdroot/indentLine.git bundle/indentLine
+```
+####4.14 Update all
 ```
 git submodule init
 git submodule update

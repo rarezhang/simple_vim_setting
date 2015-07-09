@@ -29,6 +29,8 @@ git submodule add https://github.com/bling/vim-airline.git bundle/vim-airline
 git submodule add https://github.com/altercation/vim-colors-solarized.git bundle/vim-colors-solarized
 git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
 vim -u NONE -c "helptags vim-fugitive/doc" -c q
+git submodule add https://github.com/davidhalter/jedi-vim.git bundle/jedi-vim
+git submodule add https://github.com/Yggdroot/indentLine.git bundle/indentLine
 git submodule init
 git submodule update
 git submodule foreach git submodule init

@@ -4,25 +4,24 @@
 syntax on
 set nocompatible
 set showcmd
-set ruler    " Always show current position
+set ruler " Always show current position
 set cul   " highlight current line
 set number
 set history=2000   " Sets how many lines of history VIM has to remember
 set mouse=a
-set clipboard+=unnamed  " share clipboard with windows
-set autochdir  " auto change windows cwd to file's dir
-"set autowrite  " auto save file
-set autoread   " Set to auto read when a file is changed from the outside
-set backspace=indent,eol,start  " change backspace:same as windows, backspace over everything in insert mode, same as set backspace=2
-set whichwrap+=<,>,h,l  " Automatically go to next line
-set iskeyword+=_,$,@,%,#,-  " don't change line if has these keyword
-set encoding=utf-8  " how vim shall represent characters internally
-
+set clipboard+=unnamed           " share clipboard with windows
+set autochdir                    " auto change windows cwd to file's dir
+"set autowrite                   " auto save file
+set autoread                     " Set to auto read when a file is changed from the outside
+set backspace=indent,eol,start " change backspace:same as windows, backspace over everything in insert mode, same as set backspace = 2
+set whichwrap+=<,>,h,l          " Automatically go to next line
+set iskeyword+=_,$,@,%,#,-      " don't change line if has these keyword
+set encoding=utf-8  " how vim shall represent characters internally"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " map leader & mapping
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","
+let mapleader   = ","
 let g:mapleader = ","
 "" press <leader>r: search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
@@ -36,9 +35,15 @@ map <leader>tag :TlistToggle<CR>
 map <leader>tree :NERDTreeToggle<CR>
 "" open undotree, undo and redo
 map <leader>undo :UndotreeToggle<CR>
+"" open indent line
+map <leader>line :IndentLinesToggle<CR>
+" Use CTRL-S for saving, also in Insert mode
+nmap <C-s> :w<CR>
+vmap <C-s> <ESC>:w<CR>
+imap <C-s> <ESC>:w<CR>li
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " file type
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype on
@@ -49,11 +54,11 @@ filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " search file
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set incsearch  " increament search: like search in modern browsers
-set hlsearch   " Highlight search results
-set ignorecase  " Ignore case when searching
-set smartcase   " When searching try to be smart about cases 
-set magic       " For regular expressions turn magic on
+set incsearch  "  increament search: like search in modern browsers
+set hlsearch   "  Highlight search results
+set ignorecase "  Ignore case when searching
+set smartcase  "  When searching try to be smart about cases
+set magic      "  For regular expressions turn magic on
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -61,9 +66,9 @@ set magic       " For regular expressions turn magic on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set autoindent
 set smartindent
-set tabstop=4    " 1 tab == 4 spaces
-set shiftwidth=4  " 1 tab == 4 spaces
-set expandtab   " Use spaces instead of tabs
+set tabstop=4    "  1 tab == 4 spaces
+set shiftwidth=4 "  1 tab == 4 spaces
+set expandtab    "  Use spaces instead of tabs
 "" show ALL white spaces as dot
 set listchars=trail:·
 set list
@@ -113,9 +118,9 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_auto_loc_list            = 1
+let g:syntastic_check_on_open            = 1
+let g:syntastic_check_on_wq              = 0
 
 
 
@@ -143,7 +148,6 @@ let Tlist_Exit_OnlyWindow = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set t_Co=256
 set laststatus=2
-set encoding=utf-8
 set ttimeoutlen=50
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -159,6 +163,37 @@ colorscheme solarized
 " set fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%{fugitive#statusline()} "  show Git
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set jedi
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:jedi#goto_command            = "<leader>d"
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#documentation_command    = "K"
+let g:jedi#usages_command           = "<leader>n"
+let g:jedi#completions_command      = "<C-Space>"
+let g:jedi#rename_command           = "<leader>rname"
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set tabular
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:tabular_loaded = 1
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" set indentLine
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" none X terminal
+let g:indentLine_color_tty_light = 3  " (default: 4)
+let g:indentLine_color_dark = 1 " (default: 2)
+let g:indentLine_char = '|' " Change Indent Char
+let g:indentLine_enabled = 1  " enable by default
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
