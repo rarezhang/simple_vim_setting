@@ -220,3 +220,16 @@ git submodule foreach git submodule update
 cd ~
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
+
+###6 turn off the binding of ctrl-s and gets rid of any XOFF on scrren messages
+```
+cd ~
+touch .bash_profile
+vi .bash_profile
+```
+copy and paste below content to .bash_profile
+```
+#turn off the binding of ctrl-s and gets rid of any XOFF on scrren messages when pressng ctrl-s
+bind -r '\C-s'
+stty -ixon
+```
